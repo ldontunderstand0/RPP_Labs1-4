@@ -6,8 +6,12 @@ time_stamp = time.time()
 year = time_stamp / (365 * 24 * 60 * 60)
 res += str(int(year) + 1970) + '-'
 
+for i in range(1970, int(year) + 1970):
+    if i % 4 == 0:
+        v += 1
+
 months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-days = (year - int(year)) * 365 - 12
+days = (year - int(year)) * 365 - v + 1
 month = '00'
 for i in range(len(months)):
     if days < months[i]:
