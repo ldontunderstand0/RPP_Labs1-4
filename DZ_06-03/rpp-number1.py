@@ -15,8 +15,8 @@ for i in range(len(months)):
         break
     days -= months[i]
 if len(month) < 2:
-    month = '0' + month + '-'
-res += month
+    month = '0' + month
+res += month + '-'
 
 if len(str(int(days))) < 2:
     res += '0' + str(int(days)) + ' '
